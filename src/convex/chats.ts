@@ -15,8 +15,6 @@ import { hasOrgAccess } from "./documents";
 import OpenAI from "openai";
 import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from '@google/generative-ai';
 import { GoogleGenerativeAIStream, Message, StreamingTextResponse } from 'ai';
-import { Tiktoken } from '@dqbd/tiktoken/lite';
-import { get_encoding } from "tiktoken";
 import { Ratelimit } from "@upstash/ratelimit";
 import { kv } from "@vercel/kv";
 import { match } from "ts-pattern";

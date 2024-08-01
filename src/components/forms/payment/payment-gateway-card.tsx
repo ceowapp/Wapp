@@ -14,7 +14,7 @@ import { createParams, onError } from "@/actions/payments/stripe";
 import { useStore } from "@/redux/features/apps/document/store";
 import { usePaymentContextHook } from "@/context/payment-context-provider";
 import { defaultModel } from "@/constants/ai";
-import { getAIModelIdByName } from "@/actions/ai";
+import { getPlanAIModelIdByName } from "@/actions/ai";
 import { toast } from "sonner";
 
 type Props = {};
@@ -76,7 +76,7 @@ const PaymentGatewayCard = (props: Props) => {
 
         const convexModelId = modelToUpdate.cloudModelId;
         const normalizedModel = productId.replace(/[-.]/g, '_');
-        const prismaModelId = getAIModelIdByName(normalizedModel);
+        const prismaModelId = getPlanAIModelIdByName(normalizedModel);
 
         if (!currentUser?.cloudUserId) {
           console.error("Cloud user ID is missing");

@@ -3,7 +3,7 @@ import { SubscriptionPayment, CreditPayment } from "@/types/payment";
 import { Dispatch } from "react";
 import { time } from "@/utils/time"; 
 import { CloudModel } from '@/types/users';
-import { changeAIModel, getAIModelById } from '@/actions/ai';
+import { changePlanAIModel, getPlanAIModelById } from '@/actions/ai';
 import { usePaymentContextHook } from "@/context/payment-context-provider";
 
 interface OrderData {
@@ -139,7 +139,7 @@ export const onApproveOrder: PayPalButtonsComponentProps["onApprove"] = async (d
             purchased_max_outputTokens: inputData.productInfo.outputTokens,
             purchasedAmount: amountPaid,
         };
-        const currentModel = await getAIModelById(inputData.prismaModelId);
+        const currentModel = await getPlanAIModelById(inputData.prismaModelId);
         currentModel.purchasedMaxInputTokens -= inputData.productInfo.inputTokens;
         currentModel.purchasedMaxOutputTokens -= inputData.productInfo.outputTokens;
         const prismaModelData: CloudModel = {
@@ -148,7 +148,7 @@ export const onApproveOrder: PayPalButtonsComponentProps["onApprove"] = async (d
             purchased_max_outputTokens: inputData.productInfo.outputTokens,
             purchasedAmount: amountPaid,
         };
-        await changeAIModel(inputData.prismaModelId, currentModel)
+        await changePlanAIModel(inputData.prismaModelId, currentModel)
         await updateUserCredit({ id: inputData.convexModelId, data: paymentData });
         await updateModel({ id: inputData.convexModelId, data: convexModelData });
         await updateModelInfo({ id: inputData.convexModelId, models: convexModelData });

@@ -1,13 +1,12 @@
-# My Project
+# WAPP
 
-This is a demo video of my project.
+This is a demo video of my platform. WAPP is a multi-app platform that leverages AI to streamline user experiences across various tasks and services. My mission is to integrate industry-specific apps into a single platform, providing users with a seamless experience and, more importantly, assisting them with the daily challenges they encounter in their work.
 
-[![Watch the video](https://img.youtube.com/vi/r0aAkMMhOo0?si=eduUF_JnJtlg7Dr7/maxresdefault.jpg)](https://youtu.be/r0aAkMMhOo0?si=eduUF_JnJtlg7Dr7)
+[![Watch the video](https://img.youtube.com/vi/r0aAkMMhOo0/maxresdefault.jpg)](https://youtu.be/r0aAkMMhOo0)
 
 ## Features
 
 - Run locally and in the browser
-- Compatible with all systems: MacOS, Linux, Windows
 - Advanced data manipulation and analytics
 
 ## Installation

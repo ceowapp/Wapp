@@ -2,7 +2,7 @@
 
 This is a demo video of my project.
 
-[![Watch the video](https://img.youtube.com/vi/PgcVZjbHFsE/maxresdefault.jpg)](https://youtu.be/r0aAkMMhOo0?si=eduUF_JnJtlg7Dr7)
+[![Watch the video](https://img.youtube.com/vi/r0aAkMMhOo0?si=eduUF_JnJtlg7Dr7/maxresdefault.jpg)](https://youtu.be/r0aAkMMhOo0?si=eduUF_JnJtlg7Dr7)
 
 ## Features
 

@@ -13,6 +13,6 @@ This is a demo video of my platform. WAPP is a multi-app platform that leverages
 
 Instructions on how to install and use the project.
 
-## !IMPORTANT NOTE
+## !!! IMPORTANT NOTE
 
 This is a partial source code of WAPP, not the complete codebase.
